@@ -1,0 +1,198 @@
+/* RESET CƠ BẢN */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f9ff;
+  color: #333;
+  padding: 20px;
+}
+
+/* VÙNG APP */
+.App {
+  text-align: center;
+  min-width: 300px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* RADIO + FORM */
+.input-group-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+input[type="radio"] {
+  transform: scale(1.2);
+}
+
+input[type="text"] {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+label {
+  margin-right: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  background-color: #2780e3;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1f6bc1;
+}
+
+/* KẾT QUẢ TÌM KIẾM */
+.searchResults {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.searchElement {
+  background-color: #eaf4ff;
+  border: 1px solid #b3d7ff;
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin: 10px;
+  font-size: 14px;
+}
+
+/* BẢNG LỊCH HỌC */
+.schedule {
+  margin-top: 30px;
+  overflow-x: auto;
+  border: 1px solid #bcdaf4;
+  border-radius: 8px;
+}
+
+.schedule table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 800px;
+}
+
+.schedule th,
+.schedule td {
+  border: 1px solid #bcdaf4;
+  padding: 12px;
+  text-align: left;
+  white-space: pre-wrap;
+  vertical-align: top;
+}
+
+.schedule th {
+  background-color: #2780e3;
+  color: white;
+  font-weight: bold;
+}
+
+.schedule__time {
+  background-color: #d9ecff !important;
+  font-weight: bold;
+  text-align: center;
+  width: 90px;
+  color: #000;
+}
+
+/* DÒNG THỨ + NGÀY */
+.schedule table thead tr:nth-child(2) th {
+  background-color: #e3f1ff;
+  color: #000;
+}
+
+/* CÁC Ô TIẾT HỌC */
+.schedule_item {
+  background-color: white;
+  transition: background-color 0.3s ease;
+}
+
+.schedule_item:hover {
+  background-color: #f0f8ff;
+}
+
+.schedule__lesson-type-color {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+/* ===== KHUNG CHUYỂN TUẦN ===== */
+.week-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding: 0 10px;
+}
+
+.week-navigation button {
+  padding: 8px 14px;
+  border: none;
+  background-color: #00c0ef;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.week-navigation button:hover {
+  background-color: #00a5cb;
+}
+
+.week-navigation .current_week {
+  font-size: 18px;
+  color: #2780e3;
+  font-weight: bold;
+}
+
+/* GIAO DIỆN MOBILE */
+@media (max-width: 768px) {
+  .schedule table {
+    font-size: 14px;
+  }
+
+  .schedule th,
+  .schedule td {
+    padding: 8px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .test_week_div {
+    flex-direction: column;
+  }
+
+  .week-navigation {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
